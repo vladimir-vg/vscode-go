@@ -2842,7 +2842,24 @@
         }
       ]
     },
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "go-vistree-container",
+          "title": "Goroutine Tree",
+          "icon": "media/go-logo-white.svg"
+        }
+      ]
+    },
     "views": {
+      "go-vistree-container":[
+        {
+          "type": "webview",
+          "id": "go.visTree",
+          "name": "Goroutine Tree View",
+          "when": "go.showExplorer"
+        }
+      ],
       "explorer": [
         {
           "id": "go.explorer",

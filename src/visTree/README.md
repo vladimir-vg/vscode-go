@@ -1,0 +1,1 @@
+Here is located code related to goroutine trace visualization feature.

@@ -1,6 +1,7 @@
 {
 	"version": "0.2.0",
 	"configurations": [
+
 		{
 			"name": "Launch tools/generate",
 			"type": "go",
@@ -11,6 +12,30 @@
 		},
 		{
 			"name": "Launch Extension",
+			"type": "extensionHost",
+			"request": "launch",
+			// path to VSCode executable
+			"runtimeExecutable": "${execPath}",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"--disable-extensions"
+			],
+			"outFiles": [
+				"${workspaceFolder}/dist/debugAdapter.js",
+				"${workspaceFolder}/dist/goMain.js"
+			],
+			"sourceMapPathOverrides": {
+				"${workspaceFolder}/dist/debugAdapter.js": "${workspaceFolder}/src/debugAdapter/*"
+			},
+			"sourceMaps": true,
+			"smartStep": true,
+			"preLaunchTask": "npm: bundle-dev",
+			"env": {
+				"VSCODE_GO_IN_TEST": ""  // Enable code
+			},
+		},
+		{
+			"name": "old Launch Extension",
 			"type": "extensionHost",
 			"request": "launch",
 			// path to VSCode executable

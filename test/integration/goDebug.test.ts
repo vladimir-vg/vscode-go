@@ -2516,3 +2516,4 @@ function tryRmdirRecursive(dir: string) {
 		console.log(`failed to delete ${dir}: ${e}`);
 	}
 }
+

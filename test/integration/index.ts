@@ -24,7 +24,8 @@ export function run(): Promise<void> {
 
 	return new Promise((c, e) => {
 		// glob('integration/**.test.js', { cwd: testsRoot }, (err, files) => {
-		glob('integration/visTree.test.js', { cwd: testsRoot }, (err, files) => {
+		// glob('integration/visTree.test.js', { cwd: testsRoot }, (err, files) => {
+		glob('integration/goDebug.test.js', { cwd: testsRoot }, (err, files) => {
 			if (err) {
 				return e(err);
 			}
